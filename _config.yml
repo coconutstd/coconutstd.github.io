@@ -10,7 +10,7 @@
 
 title: Coconut                          # the main title
 
-tagline: 코코넛의 IT 블로.  # it will display as the sub-title
+tagline: 코코넛의 IT 블로그.  # it will display as the sub-title
 
 description: >-                        # used by seo meta and the atom feed
   A minimal, portfolio, sidebar,
