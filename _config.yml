@@ -159,7 +159,7 @@ defaults:
         -
           label: Home
           url: /
-
+plugins: [jekyll-youtube]
 
 sass:
   sass_dir: /assets/css
