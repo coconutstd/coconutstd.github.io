@@ -51,6 +51,7 @@ baseurl: ''
 
 # Change to your timezone › http://www.timezoneconverter.com/cgi-bin/findzone/findzone
 timezone: Asia/Seoul
+future: true
 
 google_analytics:
   id: 'wnsspdl'          # Fill with your Google Analytics ID
