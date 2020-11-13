@@ -12,24 +12,26 @@ tags: [API Gateway, lambda]
 
 ## API Gateway에서 람다함수로 쿼리스트링 전달하기
 
-```python
+```
 import boto3
 import json
 from boto3.dynamodb.conditions import Key, Attr
 
 def lambda_handler(event, context):
-   
+  
+    ...
     
     response = table.query(
         KeyConditionExpression=Key('product_code').eq(event["product_code"])
     )
-
     
-    if response :
-      return {
-          'statusCode': 200,
-          'body': items
-      }
+    ...
+    
+    return {
+        'statusCode': 200,
+        'body': items
+    }
+
 ```
 
 ![image-20201113203428768](/assets/img/post/restapi1/1.png)
