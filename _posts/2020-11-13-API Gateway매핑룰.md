@@ -13,13 +13,8 @@ tags: [API Gateway, lambda]
 ## API Gateway에서 람다함수로 쿼리스트링 전달하기
 
 
-![image-20201113203428768](/assets/img/post/restapi1/1.png)
-
-
 
 위 코드는 product_code를 키로 Dynamo DB를 조회하는 람다함수 입니다. 그리고, 테스트 이벤트를 구성하여 람다함수에 리퀘스트 요청이 들어왔을 때를 시뮬레이션 해본 결과입니다. 정상적으로 핸들러 event에 쿼리가 들어오는 것을 알 수 있습니다.
-
-![image-20201113205731470](/assets/img/post/restapi1/2.png)
 
 
 
