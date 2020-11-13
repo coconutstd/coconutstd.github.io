@@ -19,13 +19,11 @@ from boto3.dynamodb.conditions import Key, Attr
 
 def lambda_handler(event, context):
    
-   	... 
     
     response = table.query(
         KeyConditionExpression=Key('product_code').eq(event["product_code"])
     )
-    
-		...
+
     
     if response :
       return {
