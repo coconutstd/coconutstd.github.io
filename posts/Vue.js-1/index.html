@@ -1,0 +1,159 @@
+<!DOCTYPE html><html lang="en" mode="light" ><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><title>Vue.js 특징 살펴보기 Javascript와 비교하며 | Coconut</title><meta name="generator" content="Jekyll v4.2.0" /><meta property="og:title" content="Vue.js 특징 살펴보기 Javascript와 비교하며" /><meta name="author" content="coconut" /><meta property="og:locale" content="en_US" /><meta name="description" content="지난번 포스팅 에서는 Vue.js 설치방법을 알아봤습니다. 오늘도 cdn방식 설치가 되었다 가정하고 설명을 진행하겠습니다. 새로운 언어, 라이브러리, 프레임워크의 빠른 시작법을 알고 싶을 땐 공식문서가 최고입니다." /><meta property="og:description" content="지난번 포스팅 에서는 Vue.js 설치방법을 알아봤습니다. 오늘도 cdn방식 설치가 되었다 가정하고 설명을 진행하겠습니다. 새로운 언어, 라이브러리, 프레임워크의 빠른 시작법을 알고 싶을 땐 공식문서가 최고입니다." /><link rel="canonical" href="https://coconutstd.github.io/posts/Vue.js-1/" /><meta property="og:url" content="https://coconutstd.github.io/posts/Vue.js-1/" /><meta property="og:site_name" content="Coconut" /><meta property="og:type" content="article" /><meta property="article:published_time" content="2020-10-26T16:30:00+09:00" /><meta name="google-site-verification" content="google_meta_tag_verification" /> <script type="application/ld+json"> {"author":{"@type":"Person","name":"coconut"},"headline":"Vue.js 특징 살펴보기 Javascript와 비교하며","dateModified":"2020-10-26T16:30:00+09:00","datePublished":"2020-10-26T16:30:00+09:00","url":"https://coconutstd.github.io/posts/Vue.js-1/","description":"지난번 포스팅 에서는 Vue.js 설치방법을 알아봤습니다. 오늘도 cdn방식 설치가 되었다 가정하고 설명을 진행하겠습니다. 새로운 언어, 라이브러리, 프레임워크의 빠른 시작법을 알고 싶을 땐 공식문서가 최고입니다.","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://coconutstd.github.io/posts/Vue.js-1/"},"@context":"https://schema.org"}</script><link rel="shortcut icon" href="/assets/img/favicons/favicon.ico" type="image/x-icon"><link rel="icon" href="/assets/img/favicons/favicon.ico" type="image/x-icon"><link rel="apple-touch-icon" href="/assets/img/favicons/apple-icon.png"><link rel="apple-touch-icon" href="/assets/img/favicons/apple-icon-precomposed.png"><link rel="apple-touch-icon" sizes="57x57" href="/assets/img/favicons/apple-icon-57x57.png"><link rel="apple-touch-icon" sizes="60x60" href="/assets/img/favicons/apple-icon-60x60.png"><link rel="apple-touch-icon" sizes="72x72" href="/assets/img/favicons/apple-icon-72x72.png"><link rel="apple-touch-icon" sizes="76x76" href="/assets/img/favicons/apple-icon-76x76.png"><link rel="apple-touch-icon" sizes="114x114" href="/assets/img/favicons/apple-icon-114x114.png"><link rel="apple-touch-icon" sizes="120x120" href="/assets/img/favicons/apple-icon-120x120.png"><link rel="apple-touch-icon" sizes="144x144" href="/assets/img/favicons/apple-icon-144x144.png"><link rel="apple-touch-icon" sizes="152x152" href="/assets/img/favicons/apple-icon-152x152.png"><link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicons/apple-icon-180x180.png"><link rel="icon" type="image/png" sizes="192x192" href="/assets/img/favicons/android-icon-192x192.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicons/favicon-32x32.png"><link rel="icon" type="image/png" sizes="96x96" href="/assets/img/favicons/favicon-96x96.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicons/favicon-16x16.png"><link rel="manifest" href="/assets/img/favicons/manifest.json"><meta name='msapplication-config' content='/assets/img/favicons/browserconfig.xml'><meta name="msapplication-TileColor" content="#ffffff"><meta name="msapplication-TileImage" content="/assets/img/favicons/ms-icon-144x144.png"><meta name="theme-color" content="#ffffff"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"><link rel="dns-prefetch" href="https://fonts.gstatic.com"><link rel="preconnect" href="https://www.google-analytics.com" crossorigin="use-credentials"><link rel="dns-prefetch" href="https://www.google-analytics.com"><link rel="preconnect" href="https://www.googletagmanager.com" crossorigin="anonymous"><link rel="dns-prefetch" href="https://www.googletagmanager.com"><link rel="preconnect" href="cdn.jsdelivr.net"><link rel="dns-prefetch" href="cdn.jsdelivr.net"><link rel="preload" as="style" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha256-LA89z+k9fjgMKQ/kq4OO2Mrf8VltYml/VES+Rg0fh20=" crossorigin><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha256-LA89z+k9fjgMKQ/kq4OO2Mrf8VltYml/VES+Rg0fh20=" crossorigin="anonymous"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.11.2/css/all.min.css" integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous"><link rel="preload" as="style" href="/assets/css/post.css"><link rel="stylesheet" href="/assets/css/post.css"><link rel="preload" as="style" href="/assets/css/lib/bootstrap-toc.min.css"><link rel="stylesheet" href="/assets/css/lib/bootstrap-toc.min.css" /><link rel="preload" as="script" href="https://cdn.jsdelivr.net/npm/jquery@3.4.1" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"> <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script> <script src="https://cdn.jsdelivr.net/combine/npm/popper.js@1.15.0,npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" async></script> <script src="/assets/js/post.min.js" async></script> <script async src="https://www.googletagmanager.com/gtag/js?id=wnsspdl"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'wnsspdl'); </script> <script src="/app.js" defer></script><body data-spy="scroll" data-target="#toc"><div id="sidebar" class="d-flex flex-column"><div id="nav-wrapper"><div id="profile-wrapper" class="d-flex flex-column"><div id="avatar" class="d-flex justify-content-center"> <a href="/" alt="avatar"> <img src="/assets/img/myavatar/myAvatar.png" alt="avatar" onerror="this.style.display='none'"> </a></div><div class="profile-text mt-3"><div class="site-title"> <a href="/">Coconut</a></div><div class="site-subtitle font-italic">코코넛의 IT 블로그.</div></div></div><ul class="nav flex-column"><li class="nav-item d-flex justify-content-center "> <a href="/" class="nav-link d-flex justify-content-center align-items-center w-100"> <i class="fa-fw fas fa-home ml-xl-3 mr-xl-3 unloaded"></i> <span>HOME</span> </a><li class="nav-item d-flex justify-content-center "> <a href="/tabs/categories/" class="nav-link d-flex justify-content-center align-items-center w-100"> <i class="fa-fw fas fa-stream ml-xl-3 mr-xl-3 unloaded"></i> <span>CATEGORIES</span> </a><li class="nav-item d-flex justify-content-center "> <a href="/tabs/tags/" class="nav-link d-flex justify-content-center align-items-center w-100"> <i class="fa-fw fas fa-tags ml-xl-3 mr-xl-3 unloaded"></i> <span>TAGS</span> </a><li class="nav-item d-flex justify-content-center "> <a href="/tabs/archives/" class="nav-link d-flex justify-content-center align-items-center w-100"> <i class="fa-fw fas fa-archive ml-xl-3 mr-xl-3 unloaded"></i> <span>ARCHIVES</span> </a><li class="nav-item d-flex justify-content-center "> <a href="/tabs/about/" class="nav-link d-flex justify-content-center align-items-center w-100"> <i class="fa-fw fas fa-info ml-xl-3 mr-xl-3 unloaded"></i> <span>ABOUT</span> </a></ul></div><div class="sidebar-bottom d-flex flex-wrap justify-content-around mt-4"> <a href="https://github.com/coconutstd" target="_blank"> <i class="fab fa-github-alt"></i> </a> <a href=" javascript:window.open('mailto:' + ['wnsspdl','naver.com'].join('@'))" > <i class="fas fa-envelope"></i> </a> <a href="/feed.xml" > <i class="fas fa-rss"></i> </a></div></div><div id="topbar-wrapper" class="row justify-content-center topbar-down"><div id="topbar" class="col-11 d-flex h-100 align-items-center justify-content-between"> <span id="breadcrumb"> <span> <a href="/"> Posts </a> </span> <span>Vue.js 특징 살펴보기 Javascript와 비교하며</span> </span> <i id="sidebar-trigger" class="fas fa-bars fa-fw"></i><div id="topbar-title"> Post</div><i id="search-trigger" class="fas fa-search fa-fw"></i> <span id="search-wrapper" class="align-items-center"> <i class="fas fa-search fa-fw"></i> <input class="form-control" id="search-input" type="search" placeholder="Search..."> <i class="fa fa-times-circle fa-fw" id="search-cleaner"></i> </span> <span id="search-cancel" >Cancel</span></div></div><div id="main-wrapper"><div id="main"><div class="row"><div id="post-wrapper" class="col-12 col-lg-11 col-xl-8"><div class="post pl-1 pr-1 pl-sm-2 pr-sm-2 pl-md-4 pr-md-4"><h1 data-toc-skip>Vue.js 특징 살펴보기 Javascript와 비교하며</h1><div class="post-meta text-muted d-flex flex-column"><div> Posted <span class="timeago " data-toggle="tooltip" data-placement="bottom" title="Mon, Oct 26, 2020, 4:30 PM +0900" > Oct 26, 2020 <i class="unloaded">2020-10-26T16:30:00+09:00</i> </span> by <span class="author"> coconut </span></div></div><div class="post-content"><p><a href="https://coconutstd.github.io/posts/Vue.js-0/">지난번 포스팅</a> 에서는 Vue.js 설치방법을 알아봤습니다. 오늘도 cdn방식 설치가 되었다 가정하고 설명을 진행하겠습니다. 새로운 언어, 라이브러리, 프레임워크의 빠른 시작법을 알고 싶을 땐 공식문서가 최고입니다.</p><p><a href="https://kr.vuejs.org/v2/guide/index.html">Vue.js 한글공식문서</a> 를 참고하여 작성했습니다. 이 포스팅은 Vue.js를 처음 시작하시고 javascript를 좀 아시는 분에게 Vue.js 인사이트를 맛보는게 도움이 될 것입니다.</p><h2 id="선언적-렌더링">선언적 렌더링</h2><p>Vue.js의 핵심에는 간단한 템플릿 구문을 사용하여 DOM에서 데이터를 선언적으로 렌더링 할 수있는 시스템이 있습니다.</p><p>여기서 템플릿 구문은 {{ 변수명 }} 을 의미합니다. Django 프레임워크의 템플릿과 의미가 상당히 유사합니다.(Django는 파이썬 웹개발 프레임워크)</p><div class="language-html highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre><td class="rouge-code"><pre><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"app"</span><span class="nt">&gt;</span>
+  {{ message }}
+<span class="nt">&lt;/div&gt;</span>
+</pre></table></code></div></div><div class="language-javascript highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre><td class="rouge-code"><pre><span class="kd">var</span> <span class="nx">app</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Vue</span><span class="p">({</span>
+  <span class="na">el</span><span class="p">:</span> <span class="dl">'</span><span class="s1">#app</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">data</span><span class="p">:</span> <span class="p">{</span>
+    <span class="na">message</span><span class="p">:</span> <span class="dl">'</span><span class="s1">안녕하세요 Vue!</span><span class="dl">'</span>
+  <span class="p">}</span>
+<span class="p">})</span>
+</pre></table></code></div></div><p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7 " data-src="/assets/img/post/vuejs2/1.png" alt="" /></p><p>반면, 데이터를 <strong>선언적으로 렌더링</strong>한다는 말이 와닿지 않습니다. 만약 자바스크립트로 구현하려면 어떻게 해야 할까요?</p><div class="language-javascript highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre><td class="rouge-code"><pre><span class="kd">let</span> <span class="nx">setMessage</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(){</span>
+    <span class="kd">let</span> <span class="nx">divElement</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="dl">'</span><span class="s1">#app</span><span class="dl">'</span><span class="p">)</span>
+    <span class="nx">divElement</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">안녕하세요 Vue!</span><span class="dl">'</span>
+<span class="p">}</span>
+<span class="nx">setMessage</span><span class="p">()</span>
+</pre></table></code></div></div><p>우선 id 값을 app으로 갖는 DOM을 찾아야 합니다. 그리고 그 내부의 innerHTML를 바꿔줍니다. 이 방법을 택했을 때 불편한 점은 무엇이 있을까요?</p><ol><li>DOM 내부 처리에 신경을 써야한다.<li>innerHTML로 데이터를 변경하면 원하는 요소만 변경하기 어렵다.</ol><p>엘리먼트의 <strong>속성</strong>도 물론 동적으로 변수와 바인딩 할 수 있습니다.</p><div class="language-html highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre><td class="rouge-code"><pre><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"app-2"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">v-bind:title=</span><span class="s">"message"</span><span class="nt">&gt;</span>
+    내 위에 잠시 마우스를 올리면 동적으로 바인딩 된 title을 볼 수 있습니다!
+  <span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre></table></code></div></div><div class="language-javascript highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre><td class="rouge-code"><pre><span class="kd">var</span> <span class="nx">app2</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Vue</span><span class="p">({</span>
+    <span class="na">el</span><span class="p">:</span> <span class="dl">'</span><span class="s1">#app-2</span><span class="dl">'</span><span class="p">,</span>
+    <span class="na">data</span><span class="p">:</span> <span class="p">{</span>
+        <span class="na">message</span><span class="p">:</span> <span class="dl">'</span><span class="s1">이 페이지는 </span><span class="dl">'</span> <span class="o">+</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">()</span> <span class="o">+</span> <span class="dl">'</span><span class="s1"> 에 로드 되었습니다</span><span class="dl">'</span>
+    <span class="p">}</span>
+<span class="p">})</span>
+</pre></table></code></div></div><p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7 " data-src="/assets/img/post/vuejs2/2.png" alt="크롬브라우저 개발자 도구 -&gt; Element" /></p><p>이를 자바스크립트 코드로 구현하면 다음과 같습니다.</p><div class="language-javascript highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre><td class="rouge-code"><pre><span class="kd">let</span> <span class="nx">setAttribute</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(){</span>
+    <span class="kd">let</span> <span class="nx">spanElement</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="dl">'</span><span class="s1">#app-2 span</span><span class="dl">'</span><span class="p">)</span>
+    <span class="nx">spanElement</span><span class="p">.</span><span class="nx">setAttribute</span><span class="p">(</span><span class="dl">"</span><span class="s2">title</span><span class="dl">"</span><span class="p">,</span> <span class="dl">'</span><span class="s1">이 페이지는</span><span class="dl">'</span> <span class="o">+</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">()</span> <span class="o">+</span> <span class="dl">'</span><span class="s1"> 에 로드 되었습니다</span><span class="dl">'</span><span class="p">)</span>
+<span class="p">}</span>
+<span class="nx">setAttribute</span><span class="p">()</span>
+</pre></table></code></div></div><h2 id="조건문-반복문">조건문 반복문</h2><p>조건문이 쓰이는 가장 기본적인 곳은 로그인, 로그아웃 버튼입니다. 사용자가 로그인 된 상태라면 로그아웃 버튼을 보여줍니다. 로그아웃 상태라면 로그인 버튼을 보여줍니다. Vue.js는 이 로직 구현을 <strong>v-if</strong> 로 매우 쉽게 구현합니다.</p><div class="language-html highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre><td class="rouge-code"><pre><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"app-3"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;p</span> <span class="na">v-if=</span><span class="s">"seen"</span><span class="nt">&gt;</span>이제 나를 볼 수 있어요<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre></table></code></div></div><div class="language-javascript highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre><td class="rouge-code"><pre><span class="kd">var</span> <span class="nx">app3</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Vue</span><span class="p">({</span>
+  <span class="na">el</span><span class="p">:</span> <span class="dl">'</span><span class="s1">#app-3</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">data</span><span class="p">:</span> <span class="p">{</span>
+    <span class="na">seen</span><span class="p">:</span> <span class="kc">true</span>
+  <span class="p">}</span>
+<span class="p">})</span>
+</pre></table></code></div></div><p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7 " data-src="/assets/img/post/vuejs2/3.png" alt="" /></p><p>이를 자바스크립트 구현하면 코드가 꽤 지저분해집니다.</p><div class="language-javascript highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+</pre><td class="rouge-code"><pre><span class="kd">let</span> <span class="nx">showElement</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(){</span>
+    <span class="kd">let</span> <span class="nx">seen</span> <span class="o">=</span> <span class="kc">true</span>
+    <span class="kd">let</span> <span class="nx">exampleElement</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="dl">'</span><span class="s1">#app-3 p</span><span class="dl">'</span><span class="p">)</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">seen</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">exampleElement</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">display</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">block</span><span class="dl">'</span>
+    <span class="p">}</span><span class="k">else</span><span class="p">{</span>
+        <span class="nx">exampleElement</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">display</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">none</span><span class="dl">'</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="nx">showElement</span><span class="p">()</span>
+</pre></table></code></div></div><p>다음은 반복문 예제입니다.</p><div class="language-html highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+</pre><td class="rouge-code"><pre><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"app-4"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;ol&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">v-for=</span><span class="s">"todo in todos"</span><span class="nt">&gt;</span>
+      
+    <span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;/ol&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre></table></code></div></div><div class="language-javascript highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+</pre><td class="rouge-code"><pre><span class="kd">var</span> <span class="nx">app4</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Vue</span><span class="p">({</span>
+  <span class="na">el</span><span class="p">:</span> <span class="dl">'</span><span class="s1">#app-4</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">data</span><span class="p">:</span> <span class="p">{</span>
+    <span class="na">todos</span><span class="p">:</span> <span class="p">[</span>
+      <span class="p">{</span> <span class="na">text</span><span class="p">:</span> <span class="dl">'</span><span class="s1">JavaScript 배우기</span><span class="dl">'</span> <span class="p">},</span>
+      <span class="p">{</span> <span class="na">text</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Vue 배우기</span><span class="dl">'</span> <span class="p">},</span>
+      <span class="p">{</span> <span class="na">text</span><span class="p">:</span> <span class="dl">'</span><span class="s1">무언가 멋진 것을 만들기</span><span class="dl">'</span> <span class="p">}</span>
+    <span class="p">]</span>
+  <span class="p">}</span>
+<span class="p">})</span>
+</pre></table></code></div></div><p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7 " data-src="/assets/img/post/vuejs2/4.png" alt="" /></p><p>자바스크립트로 구현한 코드입니다.</p><div class="language-javascript highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+</pre><td class="rouge-code"><pre><span class="kd">let</span> <span class="nx">setTodos</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(){</span>
+    <span class="kd">let</span> <span class="nx">todos</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="p">{</span> <span class="na">text</span><span class="p">:</span> <span class="dl">'</span><span class="s1">JavaScript 배우기</span><span class="dl">'</span> <span class="p">},</span>
+        <span class="p">{</span> <span class="na">text</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Vue 배우기</span><span class="dl">'</span> <span class="p">},</span>
+        <span class="p">{</span> <span class="na">text</span><span class="p">:</span> <span class="dl">'</span><span class="s1">무언가 멋진 것을 만들기</span><span class="dl">'</span> <span class="p">}</span>
+    <span class="p">]</span>
+    
+    <span class="kd">let</span> <span class="nx">listElement</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="dl">'</span><span class="s1">#app-4 ol</span><span class="dl">'</span><span class="p">)</span>
+    
+    <span class="k">for</span><span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">todos</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="o">++</span><span class="nx">i</span><span class="p">){</span>
+        <span class="nx">listElement</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="dl">'</span><span class="s1">&lt;li&gt;</span><span class="dl">'</span> <span class="o">+</span> <span class="nx">todos</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">text</span> <span class="o">+</span> <span class="dl">'</span><span class="s1">&lt;/li&gt;</span><span class="dl">'</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></table></code></div></div><p>직접 DOM을 조작하여 li태그를 추가하고 있습니다.</p><h2 id="정리">정리</h2><p><a href="https://kr.vuejs.org/v2/guide/index.html">Vue.js 한글공식문서</a> 를 보고 자바스크립트 코드를 첨부해봤습니다. 확실히 Vue.js 프레임워크를 사용하면 까다로운 DOM처리 보다 데이터 처리에 집중할 수 있습니다. 이는 백엔드 JSON 데이터를 받아서 화면을 그릴 때 개발자에게 편리함을 줍니다. 다음 포스팅에서는 Vue.js 이벤트핸들링, 인스턴스 개념에 대해 살펴보겠습니다.</p></div><div class="post-tail-wrapper text-muted"><div class="post-meta mb-3"> <i class="far fa-folder-open fa-fw mr-1"></i> <a href='/categories/frontend/'>frontend</a></div><div class="post-tags"> <i class="fa fa-tags fa-fw mr-1"></i> <a href="/tags/vue.js/" class="post-tag no-text-decoration" >vue.js</a> <a href="/tags/javascript/" class="post-tag no-text-decoration" >javascript</a></div><div class="post-tail-bottom d-flex justify-content-between align-items-center mt-3 pt-5 pb-2"><div class="license-wrapper"> This post is licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> by the author.</div><div class="share-wrapper"> <span class="share-label text-muted mr-1">Share</span> <span class="share-icons"> <a href="https://twitter.com/intent/tweet?text=Vue.js 특징 살펴보기 Javascript와 비교하며 - Coconut&url=https://coconutstd.github.io/posts/Vue.js-1/" data-toggle="tooltip" data-placement="top" title="Twitter" target="_blank"> <i class="fa-fw fab fa-twitter"></i> </a> <a href="https://www.facebook.com/sharer/sharer.php?title=Vue.js 특징 살펴보기 Javascript와 비교하며 - Coconut&u=https://coconutstd.github.io/posts/Vue.js-1/" data-toggle="tooltip" data-placement="top" title="Facebook" target="_blank"> <i class="fa-fw fab fa-facebook-square"></i> </a> <a href="https://telegram.me/share?text=Vue.js 특징 살펴보기 Javascript와 비교하며 - Coconut&url=https://coconutstd.github.io/posts/Vue.js-1/" data-toggle="tooltip" data-placement="top" title="Telegram" target="_blank"> <i class="fa-fw fab fa-telegram"></i> </a> <i class="fa-fw fas fa-link small" onclick="copyLink()" data-toggle="tooltip" data-placement="top" title="Copy link"></i> </span></div></div></div></div></div><div id="panel-wrapper" class="col-xl-3 pl-2 text-muted topbar-down"><div class="access"><div id="access-tags"><h3 data-toc-skip>Trending Tags</h3><div class="d-flex flex-wrap mt-3 mb-1 mr-3"> <a class="post-tag" href="/tags/aws/">aws</a> <a class="post-tag" href="/tags/vue/">vue</a> <a class="post-tag" href="/tags/javascript/">javascript</a> <a class="post-tag" href="/tags/ec2/">ec2</a> <a class="post-tag" href="/tags/vue.js/">vue.js</a> <a class="post-tag" href="/tags/vuejs/">vuejs</a> <a class="post-tag" href="/tags/scaleout/">scaleout</a> <a class="post-tag" href="/tags/s3/">s3</a> <a class="post-tag" href="/tags/iam/">iam</a> <a class="post-tag" href="/tags/autoscaling/">autoscaling</a></div></div></div><div id="toc-wrapper" class="pl-0 pr-4 mb-5"><h3 data-toc-skip class="pl-3 pt-2 mb-2">Contents</h3><nav id="toc" data-toggle="toc"></nav></div></div></div><div class="row"><div class="col-12 col-lg-11 col-xl-8"><div id="post-extend-wrapper" class="pl-1 pr-1 pl-sm-2 pr-sm-2 pl-md-4 pr-md-4"><div id="related-posts" class="mt-5 mb-2 mb-sm-4"><h3 class="pt-2 mt-1 mb-4 ml-1" data-toc-skip>Further Reading</h3><div class="card-deck mb-4"><div class="card"> <a href="/posts/Vue.js-2/"><div class="card-body"> <span class="timeago small" > Oct 29, 2020 <i class="unloaded">2020-10-29T23:06:00+09:00</i> </span><h3 class="pt-0 mt-1 mb-3" data-toc-skip>Vue.js 특징 살펴보기 Javascript와 비교하며(2)</h3><div class="text-muted small"><p> 지난번 포스팅 에서는 Vue와 Javascript를 비교하며 조건문, 반복문을 알아봤습니다. 오늘은 이벤트 핸들링, 양뱡향 데이터 바인딩을 알아보겠습니다. 사용자 입력 핸들링 v-on 이라는 뷰 디렉티브를 이용해 뷰 인스턴스에 이벤트 리스너를 추가 할 수 있습니다. 1 2 3 4 &lt;div id="app-5"&gt; &lt;p&gt;{{ ...</p></div></div></a></div><div class="card"> <a href="/posts/Vue.js-3/"><div class="card-body"> <span class="timeago small" > Oct 30, 2020 <i class="unloaded">2020-10-30T22:55:00+09:00</i> </span><h3 class="pt-0 mt-1 mb-3" data-toc-skip>Vue.js 컴포넌트 개발</h3><div class="text-muted small"><p> 오늘은 뷰의 컴포넌트에 대해 알아보겠습니다. 뷰는 앱이 실행될 때 루트 컴포넌트에서 시작하여 컴포넌트들의 트리로 구성됩니다. 이 말은 곧 화면을 기능단위로 쪼개는 것을 의미합니다. 잘 만들어진 컴포넌트는 재사용성을 높이고, 유지 보수하기 쉬워집니다. 규모가 작은 애플리케이션을 설계 할 때는 강박적으로 적용할 필요는 없지만, 보통 회원가입, 게시물...</p></div></div></a></div><div class="card"> <a href="/posts/Vue.js-4/"><div class="card-body"> <span class="timeago small" > Nov 2, 2020 <i class="unloaded">2020-11-02T16:58:00+09:00</i> </span><h3 class="pt-0 mt-1 mb-3" data-toc-skip>Vue.js 개발할 때 같이 사용하면 좋은 라이브러리</h3><div class="text-muted small"><p> 오늘은 Vuex, Axios에 대해 알아 보겠습니다. Vuex는 상태관리라이브러리 입니다. React 진영의 Redux와 유사합니다. 중앙 집중 방식의 애플리케이션 상태관리자로서 역할을 수행합니다. 공식가이드에는 대규모 애플리케이션을 제외하곤 그닥 성능상 이득을 볼 게 없다라고 적혀있지만, 컴포넌트간의 중복 문제 해결, 가독성, 일치성으로 인해 꼭 사...</p></div></div></a></div></div></div><div class="post-navigation d-flex justify-content-between"> <a href="/posts/AWS%EC%A0%95%EB%A6%AC-6/" class="btn btn-outline-primary"><p>AWS 개념 정리 (IAM 심화2)</p></a> <a href="/posts/%EC%84%9C%EB%B2%84%EB%A6%AC%EC%8A%A4_%EA%B3%BC%EC%A0%9C_%EC%98%81%EC%83%81/" class="btn btn-outline-primary"><p>서버리스로 구현한 동영상 스트리밍 사이트</p></a></div><div id="disqus" class="pt-2 pb-2"><p class="font-italic text-center text-muted small"> Comments powered by <a href="https://disqus.com/">Disqus</a>.</p></div><script src="/assets/js/lib/jquery.disqusloader.min.js"></script> <script> var options = { scriptUrl: '//coconutstd.disqus.com/embed.js', disqusConfig: function() { this.page.url = 'https://coconutstd.github.io/posts/Vue.js-1/'; this.page.identifier = '/posts/Vue.js-1/'; } }; $.disqusLoader('#disqus', options); </script></div></div></div><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script> <script type="text/javascript"> const imgs = document.querySelectorAll('#post-wrapper img'); const observer = lozad(imgs); observer.observe(); </script><footer class="d-flex w-100 justify-content-center"><div class="d-flex justify-content-between align-items-center"><div class="footer-left"><p class="mb-0"> © 2021 <a href="https://github.com/coconutstd">이준의</a>. <span data-toggle="tooltip" data-placement="top" title="Except where otherwise noted, the blog posts on this site are licensed under the Creative Commons Attribution 4.0 International (CC BY 4.0) License by the author.">Some rights reserved.</span></p></div><div class="footer-right"><p class="mb-0"> Powered by <a href="https://jekyllrb.com" target="_blank">Jekyll</a> with <a href="https://github.com/cotes2020/jekyll-theme-chirpy/">Chirpy</a> theme.</p></div></div></footer></div><div id="search-result-wrapper" class="d-flex justify-content-center unloaded"><div class="col-12 col-xl-11 post-content"><div id="search-hints"><h4 class="text-muted mb-4">Trending Tags</h4><a class="post-tag" href="/tags/aws/">aws</a> <a class="post-tag" href="/tags/vue/">vue</a> <a class="post-tag" href="/tags/javascript/">javascript</a> <a class="post-tag" href="/tags/ec2/">ec2</a> <a class="post-tag" href="/tags/vue.js/">vue.js</a> <a class="post-tag" href="/tags/vuejs/">vuejs</a> <a class="post-tag" href="/tags/scaleout/">scaleout</a> <a class="post-tag" href="/tags/s3/">s3</a> <a class="post-tag" href="/tags/iam/">iam</a> <a class="post-tag" href="/tags/autoscaling/">autoscaling</a></div><div id="search-results" class="d-flex flex-wrap justify-content-center text-muted mt-3"></div></div></div></div><div id="mask"></div><a id="back-to-top" href="#" class="btn btn-lg btn-box-shadow" role="button"> <i class="fas fa-angle-up"></i> </a> <script src="https://cdn.jsdelivr.net/npm/simple-jekyll-search@1.7.3/dest/simple-jekyll-search.min.js"></script> <script> SimpleJekyllSearch({ searchInput: document.getElementById('search-input'), resultsContainer: document.getElementById('search-results'), json: '/assets/js/data/search.json', searchResultTemplate: '<div class="pl-1 pr-1 pl-sm-2 pr-sm-2 pl-lg-4 pr-lg-4 pl-xl-0 pr-xl-0"> <a href="https://coconutstd.github.io{url}">{title}</a><div class="post-meta d-flex flex-column flex-sm-row text-muted mt-1 mb-1"><div class="mr-sm-4"><i class="far fa-folder fa-fw"></i>{categories}</div><div><i class="fa fa-tag fa-fw"></i>{tags}</div></div><p>{snippet}</p></div>', noResultsText: '<p class="mt-5">Oops! No result founds.</p>' }); </script>
