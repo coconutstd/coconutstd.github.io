@@ -79,13 +79,15 @@ github repository와 s3 호스팅은 미리 준비되었다고 가정하고 간�
    
    ```
 
+   
+
+   ```yml
    on: 
-
-   ​	push: 
-
-   ​		branches: 
-
-   			- main <- main 브런치의 푸쉬 이벤트를 감지합니다. (기타 push, pull, pull_request 이벤트 들이 있습니다.)
+     push: 
+       branches: 	
+         - main  
+   # main 브런치의 푸쉬 이벤트를 감지합니다. (기타 push, pull, pull_request 이벤트 들이 있습니다.)
+   ```
 
    
 
@@ -100,7 +102,7 @@ github repository와 s3 호스팅은 미리 준비되었다고 가정하고 간�
    ![Component and service overview](/assets/img/post/github_actions1/6.png)
 
    4. git push로 github에 푸쉬한 뒤 확인
-
+   
       ![image-20201118135715974](/assets/img/post/github_actions1/7.png)
 
 ​	
